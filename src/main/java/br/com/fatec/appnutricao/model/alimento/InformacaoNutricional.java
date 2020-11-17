@@ -1,4 +1,4 @@
-package br.com.fatec.appnutricao;
+package br.com.fatec.appnutricao.model.alimento;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,9 +7,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class Teste {
+public class InformacaoNutricional {
 
-	String testeString;
+	double quantidade;
 	
-	double testeDouble;
+	double valorDiario;
 }
