@@ -11,15 +11,21 @@ public class CadastrarCombinacao {
 	
 	public Combinacao cadastrarCombinacao(List<Alimento> alimentosCadastrados) {
 		
+		Scanner sc = new Scanner(System.in);
 		List<Alimento> alimentos = new ArrayList<Alimento>();
 		String continuarCadastrar = "sim";
+		
+		System.out.println("Digite o nome da Nova Combinação: ");
+		String nomeCombinacao = sc.nextLine();
+		
+		
 		
 		
 		while(continuarCadastrar.equals("sim")) {
 			boolean existeAlimento = false;
 			
 			System.out.println("Digite o nome do alimento que deseja colocar na Combinação: ");
-			Scanner sc = new Scanner(System.in);
+			
 			String nomeAlimento = sc.nextLine();
 			for (Alimento alimento : alimentosCadastrados) {
 				if(nomeAlimento.equals(alimento.getNome())) {
@@ -39,7 +45,7 @@ public class CadastrarCombinacao {
 		
 		
 		
-		Combinacao combinacao = new Combinacao(alimentos);
+		Combinacao combinacao = new Combinacao(nomeCombinacao,alimentos);
 		
 		
 		
