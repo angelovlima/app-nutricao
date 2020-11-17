@@ -11,10 +11,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 public class Receita {
+	private String nome;
 
-	String tempo;
+	private String tempo;
 	
-	String modoPreparo;
+	private String modoPreparo;
 	
-	List<Alimento> alimentos;
+	private List<Alimento> alimentos;
 }
