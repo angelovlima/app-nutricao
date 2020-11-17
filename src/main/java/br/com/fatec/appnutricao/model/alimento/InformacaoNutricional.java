@@ -14,4 +14,10 @@ public class InformacaoNutricional {
 	private double quantidade;
 	
 	private double valorDiario;
+
+	public InformacaoNutricional(String nome) {
+		this.nome = nome;
+	}
+	
+	
 }
