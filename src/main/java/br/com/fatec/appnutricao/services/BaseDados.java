@@ -3,6 +3,7 @@ package br.com.fatec.appnutricao.services;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.com.fatec.appnutricao.model.alimento.Alimento;
 import br.com.fatec.appnutricao.model.alimento.InformacaoNutricional;
 import br.com.fatec.appnutricao.model.alimento.TabelaNutricional;
 
@@ -35,6 +36,25 @@ public class BaseDados {
 		TabelaNutricional tabelaNutricional = new TabelaNutricional();
 		tabelaNutricional.setInformacoesNutricionais(popularInformacaoNutricional());
 		return tabelaNutricional; 
+	}
+	
+	//Continuar daqui
+	public List<Alimento> popularListaAlimentos() {
+		TabelaNutricional tabelaNutricional = popularTabelaNutricional();
+		TabelaNutricional tabelaNutricionalClone = new TabelaNutricional();
+		tabelaNutricionalClone.setInformacoesNutricionais(tabelaNutricional.getInformacoesNutricionais());
+		List<Alimento> alimentos = new ArrayList<Alimento>();
+		Alimento alimento1 = new Alimento("1", "Leite", tabelaNutricional);
+		Alimento alimento2 = new Alimento("1", "", tabelaNutricional);
+		Alimento alimento3 = new Alimento("1", "", tabelaNutricional);
+		Alimento alimento4 = new Alimento("1", "", tabelaNutricional);
+		Alimento alimento5 = new Alimento("1", "", tabelaNutricional);
+		Alimento alimento6 = new Alimento("1", "", tabelaNutricional);
+		Alimento alimento7 = new Alimento("1", "", tabelaNutricional);
+		Alimento alimento8 = new Alimento("1", "", tabelaNutricional);
+		Alimento alimento9 = new Alimento("1", "", tabelaNutricional);
+		Alimento alimento10 = new Alimento("1", "", tabelaNutricional);
+		return alimentos;
 	}
 
 }
