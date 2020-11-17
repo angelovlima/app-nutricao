@@ -9,6 +9,8 @@ import lombok.NoArgsConstructor;
 @Data
 public class InformacaoNutricional {
 
+	String nome;
+	
 	double quantidade;
 	
 	double valorDiario;

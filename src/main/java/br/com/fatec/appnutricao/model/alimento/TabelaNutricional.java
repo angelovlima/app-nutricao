@@ -1,5 +1,7 @@
 package br.com.fatec.appnutricao.model.alimento;
 
+import java.util.List;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,12 +11,5 @@ import lombok.NoArgsConstructor;
 @Data
 public class TabelaNutricional {
 
-	InformacaoNutricional valorEnergetico;
-	InformacaoNutricional carboidratos;
-	InformacaoNutricional proteinas;
-	InformacaoNutricional gordurasTotais;
-	InformacaoNutricional gordurasSaturadas;
-	InformacaoNutricional gordurasTrans;
-	InformacaoNutricional fibraAlimentar;
-	InformacaoNutricional sodio;
+	List<InformacaoNutricional> informacoesNutricionais;
 }
