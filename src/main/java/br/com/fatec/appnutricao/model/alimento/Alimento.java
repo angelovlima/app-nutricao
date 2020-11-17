@@ -9,9 +9,9 @@ import lombok.NoArgsConstructor;
 @Data
 public class Alimento {
 
-	String tipo;
+	private String tipo;
 	
-	String nome;
+	private String nome;
 	
-	TabelaNutricional tabelaNutricional;
+	private TabelaNutricional tabelaNutricional;
 }

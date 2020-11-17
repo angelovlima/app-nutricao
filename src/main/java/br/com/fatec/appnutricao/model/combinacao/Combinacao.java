@@ -11,6 +11,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 public class Combinacao {
-
-	List<Alimento> alimentos;
+	
+	private String nome;
+	
+	private List<Alimento> alimentos;
 }

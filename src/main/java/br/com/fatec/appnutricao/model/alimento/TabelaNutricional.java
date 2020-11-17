@@ -11,5 +11,5 @@ import lombok.NoArgsConstructor;
 @Data
 public class TabelaNutricional {
 
-	List<InformacaoNutricional> informacoesNutricionais;
+	private List<InformacaoNutricional> informacoesNutricionais;
 }
