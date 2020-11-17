@@ -2,9 +2,21 @@ package br.com.fatec.appnutricao;
 
 import java.util.Scanner;
 
+import br.com.fatec.appnutricao.model.alimento.InformacaoNutricional;
+import br.com.fatec.appnutricao.model.alimento.TabelaNutricional;
+import br.com.fatec.appnutricao.services.BaseDados;
+
 public class Menu {
 	
 	public void menu() {
+		
+		BaseDados baseDados = new BaseDados();
+		TabelaNutricional tabelaNutricional = baseDados.popularTabelaNutricional();
+		
+		System.out.println("######## TESTE DE TABELA NUTRICIONAL ########\n\n");
+		for (InformacaoNutricional item : tabelaNutricional.getInformacoesNutricionais()) {
+			System.out.println("Nome: " + item.getNome() + "\n");
+		}
 		
 		Scanner sc = new Scanner(System.in);
 		int menu = 1000;
