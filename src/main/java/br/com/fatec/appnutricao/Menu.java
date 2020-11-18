@@ -1,7 +1,9 @@
 package br.com.fatec.appnutricao;
 
+import java.util.List;
 import java.util.Scanner;
 
+import br.com.fatec.appnutricao.model.alimento.Alimento;
 import br.com.fatec.appnutricao.model.alimento.InformacaoNutricional;
 import br.com.fatec.appnutricao.model.alimento.TabelaNutricional;
 import br.com.fatec.appnutricao.services.BaseDados;
@@ -12,6 +14,15 @@ public class Menu {
 		
 		BaseDados baseDados = new BaseDados();
 		TabelaNutricional tabelaNutricional = baseDados.popularTabelaNutricional();
+		List<Alimento> alimentos = baseDados.popularListaAlimentos();
+
+//		for (Alimento alimento : alimentos) {
+//			TabelaNutricional tabelaNutricionalAlimento = alimento.getTabelaNutricional();
+//			for (InformacaoNutricional informacaoNutricional : tabelaNutricionalAlimento.getInformacoesNutricionais()) {
+//				System.out.println(informacaoNutricional.getNome() + ": " + informacaoNutricional.getQuantidade() + " " + informacaoNutricional.getUnidadeMedida());
+//				System.out.println("Valor diário: " + informacaoNutricional.getValorDiario() + "%\n");
+//			}
+//		}
 		
 		System.out.println("######## TESTE DE TABELA NUTRICIONAL ########\n\n");
 		for (InformacaoNutricional item : tabelaNutricional.getInformacoesNutricionais()) {

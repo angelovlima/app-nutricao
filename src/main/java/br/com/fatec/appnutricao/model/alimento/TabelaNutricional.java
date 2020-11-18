@@ -10,6 +10,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 public class TabelaNutricional {
+	
+	public TabelaNutricional(TabelaNutricional tabelaNutricional) {
+		this.informacoesNutricionais = tabelaNutricional.getInformacoesNutricionais();
+	}
 
 	private List<InformacaoNutricional> informacoesNutricionais;
 }
