@@ -45,17 +45,20 @@ public class Menu {
 				cadastrarAlimento.cadastrarAlimento(alimentos, tabelaNutricional);
 				break;
 			case 2:
-				cadastrarCombinacao.cadastrarCombinacao(alimentos);
+				cadastrarCombinacao.cadastrarCombinacao(alimentos, combinacoes);
 				break;
 			case 3:
-				cadastrarReceita.cadastrarReceita(alimentos);
+				cadastrarReceita.cadastrarReceita(alimentos, receitas);
 				break;
 			case 4:
 				relatorios.printarAlimentos(alimentos);
+				break;
 			case 5:
 				relatorios.printarCombinacoes(combinacoes);
+				break;
 			case 6:
 				relatorios.printarReceitas(receitas);
+				break;
 			default:
 				break;
 			}

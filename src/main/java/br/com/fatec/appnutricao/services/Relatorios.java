@@ -27,16 +27,16 @@ public class Relatorios {
 	
 	public void printarCombinacoes(List<Combinacao> combinacoes) {
 		for(Combinacao combinacao : combinacoes) {
-			System.out.println("\n" + combinacao.getNome() + "\n");
+			System.out.println("\nNome: " + combinacao.getNome() + "\n");
 			printarAlimentos(combinacao.getAlimentos());
 		}
 	}
 	
 	public void printarReceitas(List<Receita> receitas) {
 		for(Receita receita : receitas) {
-			System.out.println("\n" + receita.getNome() +
-					"\n" + receita.getTempo() +
-					"\n" + receita.getModoPreparo());
+			System.out.println("\nNome: " + receita.getNome() +
+					"\nTempo de Preparo: " + receita.getTempo() +
+					"\nModo de Preparo: " + receita.getModoPreparo());
 			printarAlimentos(receita.getAlimentos());
 		}
 	}
