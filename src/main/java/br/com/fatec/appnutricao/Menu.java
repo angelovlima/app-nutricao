@@ -22,8 +22,8 @@ public class Menu {
 		BaseDados baseDados = new BaseDados();
 		TabelaNutricional tabelaNutricional = baseDados.popularTabelaNutricional();
 		List<Alimento> alimentos = baseDados.popularListaAlimentos();
-		List<Combinacao> combinacoes = new ArrayList<Combinacao>();
-		List<Receita> receitas = new ArrayList<Receita>();
+		List<Combinacao> combinacoes = baseDados.popularCombinacao();
+		List<Receita> receitas = baseDados.popularReceita();
 		CadastrarAlimento cadastrarAlimento = new CadastrarAlimento();
 		CadastrarCombinacao cadastrarCombinacao = new CadastrarCombinacao();
 		CadastrarReceita cadastrarReceita = new CadastrarReceita();
