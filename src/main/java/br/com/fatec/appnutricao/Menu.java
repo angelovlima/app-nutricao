@@ -14,7 +14,6 @@ import br.com.fatec.appnutricao.services.CadastrarReceita;
 public class Menu {
 	
 	public void menu() {
-		
 		BaseDados baseDados = new BaseDados();
 		TabelaNutricional tabelaNutricional = baseDados.popularTabelaNutricional();
 		List<Alimento> alimentos = baseDados.popularListaAlimentos();
@@ -65,4 +64,5 @@ public class Menu {
 			}
 		}
 	}
+
 }

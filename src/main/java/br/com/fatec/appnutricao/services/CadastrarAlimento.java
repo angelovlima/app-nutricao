@@ -7,7 +7,7 @@ import br.com.fatec.appnutricao.model.alimento.InformacaoNutricional;
 import br.com.fatec.appnutricao.model.alimento.TabelaNutricional;
 
 public class CadastrarAlimento {
-	
+
 	@SuppressWarnings("resource")
 	public void cadastrarAlimento(List<Alimento> alimentosCadastrados, TabelaNutricional tabelaNutricional) {
 		Scanner sc = new Scanner(System.in);
@@ -16,14 +16,14 @@ public class CadastrarAlimento {
 		String tipo = sc.nextLine();
 		System.out.println("Digite o nome do alimento:");
 		String nome = sc.nextLine();
-		for(Alimento alimento: alimentosCadastrados) {
-			if(nome.equalsIgnoreCase(alimento.getNome())) {
+		for (Alimento alimento : alimentosCadastrados) {
+			if (nome.equalsIgnoreCase(alimento.getNome())) {
 				System.out.println("Alimento já cadastrado. Tente novamente!");
 				break;
 			}
 		}
 		System.out.println("Cadastre os dados da tabela nutricional do alimento:");
-		for(InformacaoNutricional item: tabelaNutricional.getInformacoesNutricionais()) {
+		for (InformacaoNutricional item : tabelaNutricional.getInformacoesNutricionais()) {
 			System.out.println(item.getNome());
 			System.out.println("Digite a quantidade:");
 			double quantidade = sc.nextDouble();
@@ -31,22 +31,20 @@ public class CadastrarAlimento {
 			System.out.println("Digite o valor diário:");
 			double valorDiario = sc.nextDouble();
 			item.setValorDiario(valorDiario);
-			
-			
-			
+
 		}
-		
+
 		Alimento alimentoUnidade = new Alimento(tipo, nome, tabelaNutricional);
 		alimentosCadastrados.add(alimentoUnidade);
-		
-		
-		
+
 	}
-	
+
 	public String verificarTipo(String tipo) {
-		
-		tipo.equals("1")?tipo = "Laticínios": null;
-		
-		return tipo;
+		if(tipo.equals("1")) return "Laticínios";
+		if(tipo.equals("2")) return "Carne";
+		if(tipo.equals("3")) return "Fruta e Verdura";
+		if(tipo.equals("4")) return "Grãos";
+		if(tipo.equals("5")) return "Gordura(vegetal ou animal)";
+		return "Não definido";
 	}
 }
