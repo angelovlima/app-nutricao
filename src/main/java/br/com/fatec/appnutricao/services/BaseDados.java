@@ -197,7 +197,7 @@ public class BaseDados {
 		Alimento alimento59 = new Alimento("5", "Óleo de Macadâmia", popularTabelaNutricionalAleatoriamente());
 		alimentos.add(alimento59);
 		
-		Alimento alimento60 = new Alimento("5", "Óleo de Soja ", popularTabelaNutricionalAleatoriamente());
+		Alimento alimento60 = new Alimento("5", "Óleo de Soja", popularTabelaNutricionalAleatoriamente());
 		alimentos.add(alimento60);
 		
 		//------------------------------------------------------------------------------------
