@@ -14,7 +14,7 @@ public class Relatorios {
 		
 		for (Alimento alimento : alimentos) {
 			TabelaNutricional tabelaNutricionalAlimento = alimento.getTabelaNutricional();
-			System.out.println(alimento.getNome());
+			System.out.println("+++++++++++++++++" + alimento.getNome() + "+++++++++++++++++");
 			
 			
 			

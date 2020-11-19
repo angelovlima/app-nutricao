@@ -10,10 +10,13 @@ import br.com.fatec.appnutricao.services.BaseDados;
 import br.com.fatec.appnutricao.services.CadastrarAlimento;
 import br.com.fatec.appnutricao.services.CadastrarCombinacao;
 import br.com.fatec.appnutricao.services.CadastrarReceita;
+import br.com.fatec.appnutricao.services.Relatorios;
 
 public class Menu {
 	
 	public void menu() {
+		
+		Relatorios relatorios = new Relatorios();
 		BaseDados baseDados = new BaseDados();
 		TabelaNutricional tabelaNutricional = baseDados.popularTabelaNutricional();
 		List<Alimento> alimentos = baseDados.popularListaAlimentos();
@@ -49,16 +52,19 @@ public class Menu {
 			switch(menu) {
 			case 1: 
 				cadastrarAlimento.cadastrarAlimento(alimentos, tabelaNutricional);
+				break;
 			case 2:
 				cadastrarCombinacao.cadastrarCombinacao(alimentos);
+				break;
 			case 3:
 				cadastrarReceita.cadastrarReceita(alimentos);
+				break;
 			case 4:
-				
+				relatorios.printarAlimentos(alimentos);
 			case 5:
-				
+				relatorios.printarCombinacoes(combinacoes);
 			case 6:
-				
+				relatorios.printarReceitas(receitas);
 			default:
 				break;
 			}

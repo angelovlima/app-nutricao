@@ -13,6 +13,8 @@ public class CadastrarReceita {
 		List <Alimento> alimentos = new ArrayList<Alimento>();
 		String continuarCadastrar = "sim";
 		
+		Relatorios relatorio = new Relatorios();
+		
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Nome da receita: ");
 		String nome = sc.nextLine();
@@ -23,6 +25,8 @@ public class CadastrarReceita {
 		
 		while(continuarCadastrar.equals("sim")) {
 			boolean existeAlimento = false;
+			
+			relatorio.printarAlimentos(alimentosCadastrados);
 			
 			System.out.println("Nome do alimento: ");
 			
