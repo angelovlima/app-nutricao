@@ -39,9 +39,6 @@ public class BaseDados {
 		return tabelaNutricional; 
 	}
 	
-	/**
-	 * @return
-	 */
 	public List<Alimento> popularListaAlimentos() {
 		List<Alimento> alimentos = new ArrayList<Alimento>();
 		
