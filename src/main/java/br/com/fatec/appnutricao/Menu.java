@@ -36,7 +36,7 @@ public class Menu {
 			System.out.println("\n+++++++++++++++++++++++MENU+++++++++++++++++++++++ \n" + "0: Sair \n"
 					+ "1: Cadastrar Alimento \n" + "2: Cadastrar Combinação \n" + "3: Cadastrar Receita \n"
 					+ "4: Relatório de Alimentos \n" + "5: Relatório de Combinações \n"
-					+ "6: Relatório de Refeições \n");
+					+ "6: Relatório de Refeições \n + \"7: Cálculo IMC \\n");
 			
 			menu = sc.nextInt();
 			
