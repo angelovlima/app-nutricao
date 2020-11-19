@@ -7,6 +7,8 @@ import java.util.Random;
 import br.com.fatec.appnutricao.model.alimento.Alimento;
 import br.com.fatec.appnutricao.model.alimento.InformacaoNutricional;
 import br.com.fatec.appnutricao.model.alimento.TabelaNutricional;
+import br.com.fatec.appnutricao.model.combinacao.Combinacao;
+import br.com.fatec.appnutricao.model.receita.Receita;
 
 public class BaseDados {
 
@@ -124,7 +126,7 @@ public class BaseDados {
 		Alimento alimento26 = new Alimento("3", "Banana", popularTabelaNutricionalAleatoriamente());
 		alimentos.add(alimento26);
 		
-		Alimento alimento27 = new Alimento("3", "Caju", popularTabelaNutricionalAleatoriamente());
+		Alimento alimento27 = new Alimento("3", "Maracujá", popularTabelaNutricionalAleatoriamente());
 		alimentos.add(alimento27);
 		
 		Alimento alimento28 = new Alimento("3", "Melão", popularTabelaNutricionalAleatoriamente());
@@ -213,6 +215,46 @@ public class BaseDados {
 			informacaoNutricional.setValorDiario(gerador.nextInt(99)+1);
 		}
 		return tabelaNutricional;
+	}
+	
+	public List<Combinacao> popularCombinacao(){
+		List<Combinacao> combinacoes = new ArrayList<Combinacao>();
+		List<Alimento> alimentos1 = new ArrayList<Alimento>();
+		List<Alimento> alimentos2 = new ArrayList<Alimento>();
+		
+		Alimento alimento1 = new Alimento("1", "Sorvete", popularTabelaNutricionalAleatoriamente());
+		alimentos1.add(alimento1);
+		Alimento alimento2 = new Alimento("3", "Banana", popularTabelaNutricionalAleatoriamente());
+		alimentos1.add(alimento2);
+		
+		Combinacao combinacao1 = new Combinacao("Sorvete com Banana", alimentos1);
+		combinacoes.add(combinacao1);
+		
+		Alimento alimento3 = new Alimento("4", "Pão Francês", popularTabelaNutricionalAleatoriamente());
+		alimentos2.add(alimento3);
+		
+		Alimento alimento4 = new Alimento("2", "Ovo", popularTabelaNutricionalAleatoriamente());
+		alimentos2.add(alimento4);
+		
+		Combinacao combinacao2 = new Combinacao("Pão com Ovo", alimentos2);
+		combinacoes.add(combinacao2);
+		
+		return combinacoes;
+	}
+	
+	public List<Receita> popularReceita(){
+		List<Receita> receitas = new ArrayList<Receita>();
+		List<Alimento> alimentos = new ArrayList<Alimento>();
+		Alimento alimento1 = new Alimento("1", "Creme de Leite", popularTabelaNutricionalAleatoriamente());
+		alimentos.add(alimento1);
+		Alimento alimento2 = new Alimento("1", "Leite Condesado", popularTabelaNutricionalAleatoriamente());
+		alimentos.add(alimento2);
+		Alimento alimento3 = new Alimento("3", "Maracujá", popularTabelaNutricionalAleatoriamente());
+		alimentos.add(alimento3);
+		
+		Receita receita1 = new Receita("Mousse de Maracujá","4 horas", "Em um liquidificador, bata o creme de leite, o leite condensado e o suco concentrado de maracujá. Em uma tigela, despeje a mistura e leve à geladeira por, no mínimo, 4 horas.", alimentos);
+		receitas.add(receita1);
+		return receitas;
 	}
 
 }
