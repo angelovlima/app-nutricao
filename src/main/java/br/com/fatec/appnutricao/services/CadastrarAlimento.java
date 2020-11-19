@@ -42,4 +42,11 @@ public class CadastrarAlimento {
 		
 		
 	}
+	
+	public String verificarTipo(String tipo) {
+		
+		tipo.equals("1")?tipo = "Laticínios": null;
+		
+		return tipo;
+	}
 }
