@@ -8,12 +8,12 @@ import br.com.fatec.appnutricao.model.alimento.Alimento;
 import br.com.fatec.appnutricao.model.receita.Receita;
 public class CadastrarReceita {
 	
-	public Receita cadastrarReceita(List<Alimento> alimentosCadastrados, List<Receita> receitas) {
+	public void cadastrarReceita(List<Alimento> alimentosCadastrados, List<Receita> receitas) {
 		
 		List <Alimento> alimentos = new ArrayList<Alimento>();
 		String continuarCadastrar = "sim";
 		
-		Relatorios relatorio = new Relatorios();
+		//Relatorios relatorio = new Relatorios();
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Nome da receita: ");
@@ -26,7 +26,7 @@ public class CadastrarReceita {
 		while(continuarCadastrar.equals("sim")) {
 			boolean existeAlimento = false;
 			
-			relatorio.printarAlimentos(alimentosCadastrados);
+			//relatorio.printarAlimentos(alimentosCadastrados);
 			
 			System.out.println("Nome do alimento: ");
 			
@@ -48,7 +48,7 @@ public class CadastrarReceita {
 		}
 				
 		Receita receita = new Receita(nome, modoPreparo, tempo, alimentos);
-		return receita;
+		receitas.add(receita);
 	}
 
 
