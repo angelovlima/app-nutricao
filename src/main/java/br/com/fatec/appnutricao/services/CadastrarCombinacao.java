@@ -18,11 +18,13 @@ public class CadastrarCombinacao {
 		System.out.println("Digite o nome da Nova Combinação: ");
 		String nomeCombinacao = sc.nextLine();
 		
-		
+		Relatorios relatorio = new Relatorios();
 		
 		
 		while(continuarCadastrar.equals("sim")) {
 			boolean existeAlimento = false;
+			
+			relatorio.printarAlimentos(alimentosCadastrados);
 			
 			System.out.println("Digite o nome do alimento que deseja colocar na Combinação: ");
 			
