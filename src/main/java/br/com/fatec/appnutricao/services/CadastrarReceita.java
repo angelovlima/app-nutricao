@@ -8,7 +8,7 @@ import br.com.fatec.appnutricao.model.alimento.Alimento;
 import br.com.fatec.appnutricao.model.receita.Receita;
 public class CadastrarReceita {
 	
-	public Receita cadastrarReceita(List<Alimento> alimentosCadastrados) {
+	public Receita cadastrarReceita(List<Alimento> alimentosCadastrados, List<Receita> receitas) {
 		
 		List <Alimento> alimentos = new ArrayList<Alimento>();
 		String continuarCadastrar = "sim";

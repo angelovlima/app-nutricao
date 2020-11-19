@@ -9,7 +9,7 @@ import br.com.fatec.appnutricao.model.combinacao.Combinacao;
 
 public class CadastrarCombinacao {
 	
-	public Combinacao cadastrarCombinacao(List<Alimento> alimentosCadastrados) {
+	public void cadastrarCombinacao(List<Alimento> alimentosCadastrados, List<Combinacao> combinacoes) {
 		
 		Scanner sc = new Scanner(System.in);
 		List<Alimento> alimentos = new ArrayList<Alimento>();
@@ -47,13 +47,7 @@ public class CadastrarCombinacao {
 		
 		Combinacao combinacao = new Combinacao(nomeCombinacao,alimentos);
 		
-		
-		
-		
-		
-		
-		
-		return combinacao;
+		combinacoes.add(combinacao);
 		
 	}
 }
