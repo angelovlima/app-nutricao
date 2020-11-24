@@ -1,5 +1,6 @@
 package br.com.fatec.appnutricao.services;
 
+import java.text.DecimalFormat;
 import java.util.List;
 
 import br.com.fatec.appnutricao.model.alimento.Alimento;
@@ -10,6 +11,8 @@ import br.com.fatec.appnutricao.model.receita.Receita;
 
 public class Relatorios {
 
+	CadastrarAlimento cadastrarAlimento = new CadastrarAlimento();
+	CalculadorCorporal calculadorCorporal = new CalculadorCorporal();
 	public void printarAlimentos(List<Alimento> alimentos, String tipo) {
 		if(tipo == null) {
 			for (Alimento alimento : alimentos) {
@@ -60,8 +63,10 @@ public class Relatorios {
 	}
 	
 	public void printarImc() {
+		DecimalFormat formatador = new DecimalFormat("0.00");
 		System.out.println("+++++++++++++++++ Cálculo IMC +++++++++++++++++");
 		Double imc = calculadorCorporal.calcularIMC();
+		System.out.println("\nIMC: " + formatador.format(imc));
 		if(imc < 18.5) {
 			System.out.println("Resultado: MAGREZA \n");
 		} else if (imc >= 18.5 && imc <= 24.9) {

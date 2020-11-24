@@ -36,8 +36,8 @@ public class Menu {
 			
 			System.out.println("\n+++++++++++++++++++++++MENU+++++++++++++++++++++++ \n" + "0: Sair \n"
 					+ "1: Cadastrar Alimento \n" + "2: Cadastrar Combinação \n" + "3: Cadastrar Receita \n"
-					+ "4: Relatório de Alimentos \n" + "5: Relatório de Combinações \n"
-					+ "6: Relatório de Refeições \n" + "7: Cálculo IMC\n");
+					+ "4: Relatório de Alimentos \n" + "5: Relatório de Alimentos por Tipo \n" + "6: Relatório de Combinações \n"
+					+ "7: Relatório de Refeições \n" + "8: Cálculo IMC\n");
 			
 			menu = sc.nextInt();
 			
@@ -56,11 +56,11 @@ public class Menu {
 				break;
 				
 			case 5:
-				System.out.println("1: Grupo dos Laticínios\n"+
-						"2: Grupo das Carnes\n" +
-						"3: Grupo das Frutas e Verduras\n"+
-						"4: Grupo do Grãos\n" +
-						"5: Grupo das Gorduras(Vegetais e Animais)");
+				System.out.println("1: Grupo de Laticínios\n"+
+						"2: Grupo de Carnes\n" +
+						"3: Grupo de Frutas e Verduras\n"+
+						"4: Grupo de Grãos\n" +
+						"5: Grupo de Gorduras(Vegetais e Animais)");
 				String tipo = scString.nextLine();
 				relatorios.printarAlimentos(alimentos, tipo);
 				break;
@@ -70,7 +70,7 @@ public class Menu {
 			case 7:
 				relatorios.printarReceitas(receitas);
 				break;
-			case 7:
+			case 8:
 				relatorios.printarImc();
 				break;
 			default:
