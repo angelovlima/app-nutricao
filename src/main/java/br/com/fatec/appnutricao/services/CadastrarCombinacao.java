@@ -24,7 +24,7 @@ public class CadastrarCombinacao {
 		while(continuarCadastrar.equals("sim")) {
 			boolean existeAlimento = false;
 			
-			relatorio.printarAlimentos(alimentosCadastrados);
+			relatorio.printarAlimentos(alimentosCadastrados,null);
 			
 			System.out.println("Digite o nome do alimento que deseja colocar na Combinação: ");
 			
