@@ -10,12 +10,14 @@ import br.com.fatec.appnutricao.model.receita.Receita;
 
 public class Relatorios {
 
+	CadastrarAlimento cadastrarAlimento = new CadastrarAlimento();
+	CalculadorCorporal calculadorCorporal = new CalculadorCorporal();
 	public void printarAlimentos(List<Alimento> alimentos) {
 		
 		for (Alimento alimento : alimentos) {
 			TabelaNutricional tabelaNutricionalAlimento = alimento.getTabelaNutricional();
 			System.out.println("+++++++++++++++++" + alimento.getNome() + "+++++++++++++++++");
-			
+			System.out.println("Tipo: " + cadastrarAlimento.verificarTipo(alimento.getTipo()));
 			
 			
 			for (InformacaoNutricional informacaoNutricional : tabelaNutricionalAlimento.getInformacoesNutricionais()) {
@@ -39,5 +41,22 @@ public class Relatorios {
 					"\nModo de Preparo: " + receita.getModoPreparo());
 			printarAlimentos(receita.getAlimentos());
 		}
+	}
+	
+	public void printarImc() {
+		System.out.println("+++++++++++++++++ Cálculo IMC +++++++++++++++++");
+		Double imc = calculadorCorporal.calcularIMC();
+		if(imc < 18.5) {
+			System.out.println("Resultado: MAGREZA \n");
+		} else if (imc >= 18.5 && imc <= 24.9) {
+			System.out.println("Resultado: NORMAL \n");
+		} else if (imc >= 25.0 && imc <= 29.9) {
+			System.out.println("Resultado: SOBREPESO \n");
+		} else if (imc >= 30.0 && imc <= 39.9) {
+			System.out.println("Resultado: OBESIDADE \n");
+		} else {
+			System.out.println("Resultado: OBESIDADE GRAVE \n");
+		}
+		
 	}
 }

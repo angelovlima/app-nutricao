@@ -1,6 +1,5 @@
 package br.com.fatec.appnutricao;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -12,6 +11,7 @@ import br.com.fatec.appnutricao.services.BaseDados;
 import br.com.fatec.appnutricao.services.CadastrarAlimento;
 import br.com.fatec.appnutricao.services.CadastrarCombinacao;
 import br.com.fatec.appnutricao.services.CadastrarReceita;
+import br.com.fatec.appnutricao.services.CalculadorCorporal;
 import br.com.fatec.appnutricao.services.Relatorios;
 
 public class Menu {
@@ -36,7 +36,7 @@ public class Menu {
 			System.out.println("\n+++++++++++++++++++++++MENU+++++++++++++++++++++++ \n" + "0: Sair \n"
 					+ "1: Cadastrar Alimento \n" + "2: Cadastrar Combinação \n" + "3: Cadastrar Receita \n"
 					+ "4: Relatório de Alimentos \n" + "5: Relatório de Combinações \n"
-					+ "6: Relatório de Refeições \n + \"7: Cálculo IMC \\n");
+					+ "6: Relatório de Refeições \n" + "7: Cálculo IMC\n");
 			
 			menu = sc.nextInt();
 			
@@ -58,6 +58,9 @@ public class Menu {
 				break;
 			case 6:
 				relatorios.printarReceitas(receitas);
+				break;
+			case 7:
+				relatorios.printarImc();
 				break;
 			default:
 				break;
