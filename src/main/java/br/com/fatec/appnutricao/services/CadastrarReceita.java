@@ -26,7 +26,7 @@ public class CadastrarReceita {
 		while(continuarCadastrar.equals("sim")) {
 			boolean existeAlimento = false;
 			
-			relatorio.printarAlimentos(alimentosCadastrados);
+			relatorio.printarAlimentos(alimentosCadastrados, null);
 			
 			System.out.println("Nome do alimento: ");
 			

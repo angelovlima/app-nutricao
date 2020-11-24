@@ -29,6 +29,7 @@ public class Menu {
 		CadastrarReceita cadastrarReceita = new CadastrarReceita();
 		
 		Scanner sc = new Scanner(System.in);
+		Scanner scString = new Scanner(System.in);
 		int menu = 1000;
 		
 		while(menu != 0) {
@@ -51,12 +52,22 @@ public class Menu {
 				cadastrarReceita.cadastrarReceita(alimentos, receitas);
 				break;
 			case 4:
-				relatorios.printarAlimentos(alimentos);
+				relatorios.printarAlimentos(alimentos, null);
 				break;
+				
 			case 5:
-				relatorios.printarCombinacoes(combinacoes);
+				System.out.println("1: Grupo dos Laticínios\n"+
+						"2: Grupo das Carnes\n" +
+						"3: Grupo das Frutas e Verduras\n"+
+						"4: Grupo do Grãos\n" +
+						"5: Grupo das Gorduras(Vegetais e Animais)");
+				String tipo = scString.nextLine();
+				relatorios.printarAlimentos(alimentos, tipo);
 				break;
 			case 6:
+				relatorios.printarCombinacoes(combinacoes);
+				break;
+			case 7:
 				relatorios.printarReceitas(receitas);
 				break;
 			default:
